@@ -1,7 +1,7 @@
-package com.example.springboot_hello.service;
+package com.github.ten_revengineer.muscle.service;
 
-import com.example.springboot_hello.model.User;
-import com.example.springboot_hello.repository.UserRepository;
+import com.github.ten_revengineer.muscle.model.User;
+import com.github.ten_revengineer.muscle.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
