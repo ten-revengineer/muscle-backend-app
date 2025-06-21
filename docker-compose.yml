@@ -1,26 +1,16 @@
 services:
   mysql:
-    image: mysql:8.0
+    image: mysql:8.4
     container_name: mysql
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword  # rootのパスワード（任意のものに変更OK）
-      MYSQL_DATABASE: mydb             # 最初に作るデータベース名
+      MYSQL_ROOT_PASSWORD: rootpassword  # rootユーザーのパスワード
+      MYSQL_DATABASE: muscle             # 最初に作るデータベース名
       MYSQL_USER: user                   # 普通ユーザー名
       MYSQL_PASSWORD: userpassword       # 普通ユーザーのパスワード
     ports:
-      - "13306:3306"                     # ホストの3306をコンテナの3306に割り当て
+      - "3306:3306"                      # ホストの3306をコンテナの3306に割り当て
     volumes:
-      - mysql_data:/var/lib/mysql       # データ永続化
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: my_phpmyadmin
-    platform: linux/amd64
-    environment:
-      PMA_HOST: mysql                   # 接続先のDBサービス名（mysql）
-      PMA_PORT: 3306                   # MySQLのポート番号
-    ports:
-      - "8081:80"                      # ホストの8080をコンテナの80に割り当て
+      - mysql_data:/var/lib/mysql        # データを永続化するディレクトリを指定
 
 volumes:
-  mysql_data:
+  mysql_data:                            # Dockerが自動的に作成する外部保存領域（名前付きボリューム）
