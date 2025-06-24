@@ -8,11 +8,11 @@
 		<version>3.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>muslce-backend-app</artifactId>
+	<groupId>com.github.ten-revengineer</groupId>
+	<artifactId>muscle-backend-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-hello</name>
-	<description>Demo project for Spring Boot</description>
+	<name>muscle-backend-app</name>
+	<description>Spring Boot backend for muscle tracking</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -40,32 +40,24 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>jakarta.persistence</groupId>
 			<artifactId>jakarta.persistence-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
 
-		<!-- Spring Boot Starter Data JPA -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
-
-		<!-- MySQLのドライバー（MySQLを使用する場合） -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.33</version>
 		</dependency>
 
-		<!-- H2データベース（テスト用） - 必要ない場合は削除しても良い -->
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 	</dependencies>
 
 	<build>

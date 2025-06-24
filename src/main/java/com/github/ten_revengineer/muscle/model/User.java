@@ -1,4 +1,4 @@
-package com.example.springboot_hello.model;
+package com.github.ten_revengineer.muscle.model;
 
 import jakarta.persistence.*;
 

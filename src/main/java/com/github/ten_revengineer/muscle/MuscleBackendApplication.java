@@ -1,19 +1,17 @@
-package com.example.springboot_hello;
+package com.github.ten_revengineer.muscle;
 
-import com.example.springboot_hello.model.User;
-import com.example.springboot_hello.repository.UserRepository;
+import com.github.ten_revengineer.muscle.model.User;
+import com.github.ten_revengineer.muscle.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-public class SpringbootHelloApplication {
+public class MuscleBackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootHelloApplication.class, args);
+		SpringApplication.run(MuscleBackendApplication.class, args);
 	}
 
 	@Bean
