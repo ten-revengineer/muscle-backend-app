@@ -1,4 +1,17 @@
 services:
+  app:
+    build: .
+    container_name: springboot-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/muscle
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: userpassword
+    networks:
+      - backend
   mysql:
     image: mysql:8.4
     container_name: mysql
@@ -11,6 +24,9 @@ services:
       - "3306:3306"                      # ホストの3306をコンテナの3306に割り当て
     volumes:
       - mysql_data:/var/lib/mysql        # データを永続化するディレクトリを指定
-
+    networks:
+      - backend
 volumes:
   mysql_data:                            # Dockerが自動的に作成する外部保存領域（名前付きボリューム）
+networks:
+  backend:
